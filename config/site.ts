@@ -6,6 +6,6 @@ export const siteConfig = {
     'Design resources for developers.',
   links: {
     twitter: 'https://twitter.com/disin8',
-    github: 'https://github.com/disin8/resoursify',
+    github: 'https://github.com/disin8/re-sources',
   },
 }

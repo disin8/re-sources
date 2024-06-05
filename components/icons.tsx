@@ -14,7 +14,7 @@ import type {
   LucideProps,
 } from 'lucide-react'
 
-export type Icon = typeof LucideIcon
+export type Icon = LucideIcon
 
 export const Icons = {
   sun: SunMedium,
