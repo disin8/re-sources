@@ -1,8 +1,14 @@
 export const typographyLinks = [
   {
-    name: 'One',
-    description: 'First',
-    url: 'https://github.com/',
-    image: '',
+    name: 'Fontshare',
+    description: 'Free font',
+    url: 'https://www.fontshare.com/',
+    image: '/images/satoshi.png',
+  },
+  {
+    name: 'Freefaces',
+    description: 'Free nice fonts',
+    url: 'https://www.freefaces.gallery/',
+    image: '/images/freefaces.png',
   },
 ]

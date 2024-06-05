@@ -1,8 +1,8 @@
 export const colorsLinks = [
   {
-    name: 'Color',
-    description: 'Colors',
-    url: 'https://github.com/disin8',
-    image: '',
+    name: 'Colourcontrast',
+    description: 'Awesome palette for free',
+    url: 'https://colourcontrast.cc/',
+    image: '/images/colourcontrast.png',
   },
 ]

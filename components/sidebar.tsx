@@ -63,7 +63,7 @@ export function Sidebar() {
             <Icons.mail width="14px" height="14px" />
           </Link>
         </Button>
-        <span className="text-sm text-gray-400 leading-5">© 2024 RE &#183; SOURCES </span>
+        <span className="text-sm text-gray-400 leading-5">© 2024 re • sources</span>
       </div>
     </aside>
   )
