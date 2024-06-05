@@ -1,5 +1,3 @@
-import { Icons } from '@/components/icons'
-
 export const sidebar = [
   {
     name: 'Typography',
@@ -10,5 +8,5 @@ export const sidebar = [
     name: 'Colors',
     link: 'colors',
     icon: 'colors',
-  }
+  },
 ]

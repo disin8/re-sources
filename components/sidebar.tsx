@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Button } from './ui/button'
-import type { Icon } from './icons'
 import { Icons } from './icons'
 import { sidebar } from '@/config/sidebar'
 import { siteConfig } from '@/config/site'
@@ -27,7 +26,7 @@ export function Sidebar() {
           </div>
         </Link>
         {sidebar.map((link) => {
-          const Icon: Icon = Icons[link.icon as keyof typeof Icons]
+          const Icon = Icons[link.icon as keyof typeof Icons]
           return (
             <Link href={link.link} key={link.link}>
               <div className="w-full flex gap-3 items-center px-3 py-2 rounded-lg cursor-pointer text-black group transition-colors relative z-0">
