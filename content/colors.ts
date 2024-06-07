@@ -14,6 +14,7 @@ export const colorsLinks: IContent[] = [
     url: 'https://www.shadergradient.co/',
     image: '/images/colors/shadergradient.webp',
     optional: 'free',
+    isNew: true,
   },
   {
     name: 'UIcolors',

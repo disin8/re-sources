@@ -6,9 +6,9 @@ import { typographyLinks } from './typography'
 import type { IContent } from '@/types/content'
 
 export const contentLinks: Record<string, IContent[]> = {
-  typography: typographyLinks,
-  colors: colorsLinks,
-  tools: toolsLinks,
-  icons: iconsLinks,
-  aitools: aitoolsLinks,
+  'typography': typographyLinks,
+  'colors': colorsLinks,
+  'tools': toolsLinks,
+  'icons': iconsLinks,
+  'ai-tools': aitoolsLinks,
 }
