@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { Button } from './ui/button'
 import { Icons } from './icons'
-import { sidebar } from '@/config/sidebar'
 import { siteConfig } from '@/config/site'
 
 export function SidebarFooter() {
