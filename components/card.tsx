@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { IContent } from '@/types/content'
 
-export function Card({ url, description, image, name, optional, tag }: IContent) {
+export function Card({ url, description, image, name, optional, isNew }: IContent) {
   return (
     <Link href={url} target="_blank">
       <div
@@ -24,9 +24,9 @@ export function Card({ url, description, image, name, optional, tag }: IContent)
           <div className="text-white absolute bottom-2 left-2 backdrop-blur-sm bg-white/15 rounded-lg inline-block px-2 py-1">
             {optional}
           </div>
-          {tag && (
+          {isNew && (
             <div className="text-white absolute top-2 right-2 backdrop-blur-sm bg-[#799dff]/50 rounded-lg inline-block px-2 py-1">
-              {tag}
+              new
             </div>
           )}
         </div>

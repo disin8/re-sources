@@ -7,7 +7,7 @@ export const typographyLinks: IContent[] = [
     url: 'https://www.fontshare.com/',
     image: '/images/typography/fontshare.webp',
     optional: 'free',
-    tag: 'new',
+    isNew: true,
   },
   {
     name: 'Freefaces',
