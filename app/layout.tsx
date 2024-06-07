@@ -1,6 +1,8 @@
 import '@/styles/globals.css'
 import type { Metadata, Viewport } from 'next'
 
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { siteConfig } from '@/config/site'
 import { fontSans } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
@@ -49,6 +51,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <main className="h-full flex flex-row pt-[66px]">
               <Sidebar />
               <div className="px-[12px] py-8 h-full w-full md:ml-[250px]">{children}</div>
+              <Analytics />
+              <SpeedInsights />
             </main>
           </ThemeProvider>
         </body>
