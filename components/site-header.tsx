@@ -5,6 +5,7 @@ import { siteConfig } from '@/config/site'
 import { buttonVariants } from '@/components/ui/button'
 import { Icons } from '@/components/icons'
 import { ThemeToggle } from '@/components/theme-toggle'
+import { MobileSidebar } from '@/components/mobile-sidebar'
 
 export function SiteHeader() {
   return (
@@ -22,6 +23,7 @@ export function SiteHeader() {
             href={siteConfig.links.github}
             target="_blank"
             rel="noreferrer"
+            className="hidden md:flex"
           >
             <div
               className={buttonVariants({
@@ -34,6 +36,7 @@ export function SiteHeader() {
             </div>
           </Link>
           <ThemeToggle />
+          <MobileSidebar />
         </div>
       </div>
     </nav>

@@ -48,7 +48,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <SiteHeader />
             <main className="h-full flex flex-row pt-[66px]">
               <Sidebar />
-              <div className="px-[12px] py-8 h-full w-full sm:ml-[250px]">{children}</div>
+              <div className="px-[12px] py-8 h-full w-full md:ml-[250px]">{children}</div>
             </main>
           </ThemeProvider>
         </body>

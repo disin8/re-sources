@@ -2,17 +2,16 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Button } from './ui/button'
 import { Icons } from './icons'
+import { SidebarFooter } from './sidebar-footer'
 import { sidebar } from '@/config/sidebar'
-import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
 
 export function Sidebar() {
   const pathname = usePathname()
 
   return (
-    <aside className="w-full border-r border-gray-100 dark:border-neutral-900 flex-col justify-between bg-background p-4 max-w-[250px] h-[calc(100svh-149px)] sm:h-[calc(100svh-66px)] hidden sm:flex fixed top-[66px]">
+    <aside className="w-full border-r border-gray-100 dark:border-neutral-900 flex-col justify-between bg-background p-4 max-w-[250px] h-[calc(100svh-149px)] md:h-[calc(100svh-66px)] hidden md:flex fixed top-[66px]">
       <div className="overflow-y-auto">
         <Link href="/">
           <div className="w-full flex gap-3 items-center px-3 py-2 rounded-lg cursor-pointer text-black group transition-colors relative z-0">
@@ -42,28 +41,7 @@ export function Sidebar() {
           )
         })}
       </div>
-      <div className="w-full pt-2 flex items-center flex-col gap-2 bg-background text-gray-600 dark:text-neutral-400 text-sm">
-        <div className="w-full flex gap-4">
-          <Button className="w-full justify-between" asChild variant="outline">
-            <Link href={siteConfig.links.github}>
-              GitHub
-              <Icons.external width="14px" height="14px" />
-            </Link>
-          </Button>
-          <Button asChild variant="outline">
-            <Link href={siteConfig.links.twitter}>
-              <Icons.twitter width="14px" height="14px" />
-            </Link>
-          </Button>
-        </div>
-        <Button className="w-full justify-between" asChild variant="outline">
-          <Link href="mailto:hi@resources.com">
-            hi@resources.com
-            <Icons.mail width="14px" height="14px" />
-          </Link>
-        </Button>
-        <span className="text-sm text-gray-400 leading-5">© 2024 re • sources</span>
-      </div>
+      <SidebarFooter />
     </aside>
   )
 }
