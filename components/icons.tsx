@@ -1,12 +1,15 @@
 import {
+  Brain,
   CircleDotDashed,
   ExternalLink,
+  Image,
   Mail,
   Menu,
   Moon,
   Palette,
   SunMedium,
   Type,
+  Wrench,
   X,
 } from 'lucide-react'
 
@@ -24,6 +27,9 @@ export const Icons = {
   colors: Palette,
   dot: CircleDotDashed,
   menu: Menu,
+  tools: Wrench,
+  icons: Image,
+  aitools: Brain,
   gitHub: (props: LucideProps) => (
     <svg viewBox="0 0 438.549 438.549" {...props}>
       <path

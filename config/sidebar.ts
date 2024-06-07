@@ -9,4 +9,19 @@ export const sidebar = [
     link: 'colors',
     icon: 'colors',
   },
+  {
+    name: 'Tools',
+    link: 'tools',
+    icon: 'tools',
+  },
+  {
+    name: 'Icons',
+    link: 'icons',
+    icon: 'icons',
+  },
+  {
+    name: 'AI tools',
+    link: 'ai-tools',
+    icon: 'aitools',
+  },
 ]
