@@ -12,7 +12,7 @@ export function Sidebar() {
   const pathname = usePathname()
 
   return (
-    <aside className="w-full border-r border-gray-100 dark:border-neutral-900 flex-col justify-between bg-background p-4 max-w-[250px] h-[calc(100svh-149px)] sm:h-[calc(100svh-67px)] hidden sm:flex fixed top-[67px]">
+    <aside className="w-full border-r border-gray-100 dark:border-neutral-900 flex-col justify-between bg-background p-4 max-w-[250px] h-[calc(100svh-149px)] sm:h-[calc(100svh-66px)] hidden sm:flex fixed top-[66px]">
       <div className="overflow-y-auto">
         <Link href="/">
           <div className="w-full flex gap-3 items-center px-3 py-2 rounded-lg cursor-pointer text-black group transition-colors relative z-0">

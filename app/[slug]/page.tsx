@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { contentLinks } from '@/content'
+import { Card } from '@/components/card'
 
 async function getData(slug: string) {
   const links = contentLinks[slug as keyof typeof contentLinks]
@@ -18,41 +19,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         className="w-full grid gap-x-4 gap-y-6 md:grid-cols-2 lg:grid-cols-3 mt-8 pb-[80px]"
       >
         {links?.length && links.map(link => (
-          <Link href={link.url} target="_blank">
-            <div
-              className="group p-3 transition-all rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-900 hover:scale-101 active:scale-99 ease-in-out"
-            >
-              <div
-                className="relative overflow-hidden rounded-md border border-gray-100 dark:border-neutral-900 select-none aspect-video"
-              >
-                <Image
-                  alt={link.description}
-                  src={link.image}
-                  fill
-                  loading="lazy"
-                  className="rounded-lg object-cover object-left"
-                />
-              </div>
-              <div className="mt-2 flex items-center w-full">
-                <div
-                  className="flex items-start h-full w-full gap-2"
-                >
-                  <div className="w-full">
-                    <p
-                      className="text-sm text-gray-1000 leading-5"
-                    >
-                      {link.name}
-                    </p>
-                    <p
-                      className="text-sm text-gray-400 leading-5"
-                    >
-                      {link.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Link>
+          <Card description={link.description} name={link.name} image={link.image} url={link.url} key={link.name} />
         ))}
       </div>
     </section>
