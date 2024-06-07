@@ -36,7 +36,7 @@ export function MobileSidebar() {
         >
           <Brand />
         </MobileLink>
-        <ScrollArea className="my-4 h-[calc(100vh-16rem)] pb-8">
+        <ScrollArea className="my-4 h-[calc(100vh-20rem)] pb-8">
           <div className="flex flex-col space-y-3 px-3">
             {sidebar.map(
               item =>
