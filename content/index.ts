@@ -1,8 +1,8 @@
 import { colorsLinks } from './colors'
 import { typographyLinks } from './typography'
-import type { ICard } from '@/types/card'
+import type { IContent } from '@/types/content'
 
-export const contentLinks: Record<string, ICard[]> = {
+export const contentLinks: Record<string, IContent[]> = {
   typography: typographyLinks,
   colors: colorsLinks,
 }
