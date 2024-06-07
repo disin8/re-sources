@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "incremental": true,
+    "incremental": false,
     "jsx": "preserve",
     "lib": [
       "dom",
@@ -19,7 +19,7 @@
     "allowJs": true,
     "strict": true,
     "strictNullChecks": true,
-    "noEmit": false,
+    "noEmit": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
