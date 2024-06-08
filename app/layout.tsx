@@ -11,16 +11,34 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { Sidebar } from '@/components/sidebar'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://re-sources.vercel.app/'),
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.webp',
-    apple: '/apple-touch-icon.webp',
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: 'https://re-sources.vercel.app/',
+    siteName: siteConfig.name,
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      'index': true,
+      'follow': true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  twitter: {
+    title: siteConfig.name,
+    card: 'summary_large_image',
   },
 }
 
