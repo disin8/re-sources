@@ -2,23 +2,25 @@
 
 import * as React from 'react'
 import type { LinkProps } from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 import { ScrollArea } from './ui/scroll-area'
 import { Brand } from './brand'
 import { SidebarFooter } from './sidebar-footer'
+import { SidebarLink } from './sidebar-link'
 import { cn } from '@/lib/utils'
 import { Icons } from '@/components/icons'
 import { Button } from '@/components/ui/button'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
 import { sidebar } from '@/config/sidebar'
 
 export function MobileSidebar() {
   const [open, setOpen] = React.useState(false)
+  const pathname = usePathname()
 
   return (
-    <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild>
+    <Drawer direction="right" open={open} onOpenChange={setOpen}>
+      <DrawerTrigger asChild>
         <Button
           variant="ghost"
           size="icon"
@@ -27,17 +29,25 @@ export function MobileSidebar() {
           <Icons.menu width={14} height={14} />
           <span className="sr-only">Toggle Menu</span>
         </Button>
-      </SheetTrigger>
-      <SheetContent side="right">
-        <MobileLink
+      </DrawerTrigger>
+      <DrawerContent className="h-screen p-6 top-0 right-0 left-auto mt-0 w-full max-w-96 rounded-none">
+        <Link
           href="/"
           className="flex items-center"
-          onOpenChange={setOpen}
+          onClick={() => setOpen(false)}
         >
           <Brand />
-        </MobileLink>
+        </Link>
         <ScrollArea className="my-4 h-[calc(100vh-20rem)] pb-8">
-          <div className="flex flex-col space-y-3 px-3">
+          <div className="flex flex-col">
+            <MobileLink
+              href="/"
+              onOpenChange={setOpen}
+              icon="dot"
+              highlight={pathname === '/'}
+            >
+              All
+            </MobileLink>
             {sidebar.map(
               item =>
                 item.link && (
@@ -45,6 +55,8 @@ export function MobileSidebar() {
                     key={item.link}
                     href={item.link}
                     onOpenChange={setOpen}
+                    icon={item.icon}
+                    highlight={pathname?.startsWith(`/${item.link}`)}
                   >
                     {item.name}
                   </MobileLink>
@@ -53,8 +65,8 @@ export function MobileSidebar() {
           </div>
         </ScrollArea>
         <SidebarFooter />
-      </SheetContent>
-    </Sheet>
+      </DrawerContent>
+    </Drawer>
   )
 }
 
@@ -62,6 +74,8 @@ interface MobileLinkProps extends LinkProps {
   onOpenChange?: (open: boolean) => void
   children: React.ReactNode
   className?: string
+  highlight: boolean
+  icon: string
 }
 
 function MobileLink({
@@ -73,7 +87,7 @@ function MobileLink({
 }: MobileLinkProps) {
   const router = useRouter()
   return (
-    <Link
+    <SidebarLink
       href={href}
       onClick={() => {
         router.push(href.toString())
@@ -83,6 +97,6 @@ function MobileLink({
       {...props}
     >
       {children}
-    </Link>
+    </SidebarLink>
   )
 }
