@@ -1,6 +1,5 @@
 'use client'
 import { usePathname } from 'next/navigation'
-import { Icons } from './icons'
 import { SidebarLink } from './sidebar-link'
 import { sidebar } from '@/config/sidebar'
 
