@@ -16,6 +16,10 @@ module.exports = {
       colors: {
         border: 'hsl(var(--border))',
         ring: 'hsl(var(--ring))',
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
       },
