@@ -25,6 +25,7 @@ export function CommandLink({ name, optional, description, url, tags }: Omit<ICo
       value={name}
       keywords={[optional, description, ...(tags || [])]}
       asChild
+      className="cursor-pointer"
     >
       <Link href={url} target="_blank" className="group flex flex-row justify-between">
         <span>

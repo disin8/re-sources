@@ -18,7 +18,7 @@ export function Card({ url, description, image, name, optional, isNew }: IConten
               src={image}
               fill
               loading="lazy"
-              className="rounded-lg object-cover object-left group-hover:scale-105 transition ease-in-out delay-250"
+              className="rounded-lg object-cover object-center group-hover:scale-105 transition ease-in-out delay-250"
             />
           </div>
           <div className="text-white absolute bottom-2 left-2 backdrop-blur-sm bg-white/15 rounded-lg inline-block px-2 py-1">
