@@ -1,5 +1,6 @@
 import {
   Brain,
+  CircleDashed,
   CircleDotDashed,
   ExternalLink,
   Image,
@@ -30,6 +31,7 @@ export const Icons = {
   tools: Wrench,
   icons: Image,
   aitools: Brain,
+  circleDashed: CircleDashed,
   gitHub: (props: LucideProps) => (
     <svg viewBox="0 0 438.549 438.549" {...props}>
       <path

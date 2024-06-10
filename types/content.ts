@@ -4,5 +4,6 @@ export interface IContent {
   url: string
   image: string
   optional: string
+  tags?: string[]
   isNew?: boolean
 }
