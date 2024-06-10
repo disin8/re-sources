@@ -23,7 +23,7 @@ export function SidebarLink({ href, highlight, icon, children, className, ...pro
         >
           <Icon width={14} height={14} />
         </div>
-        <span className="text-black dark:text-white text-base sm:text-sm select-none z-10">{children}</span>
+        <span className="text-black dark:text-white text-sm select-none z-10">{children}</span>
         {highlight && <div className="bg-gray-100 dark:bg-neutral-900 rounded-lg w-full h-full absolute top-0 left-0 z-0" style={{ opacity: 1 }}></div>}
       </div>
     </Link>

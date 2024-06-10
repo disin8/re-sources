@@ -8,11 +8,12 @@ import { ScrollArea } from './ui/scroll-area'
 import { Brand } from './brand'
 import { SidebarFooter } from './sidebar-footer'
 import { SidebarLink } from './sidebar-link'
+import { CommandMenu } from './command-menu'
 import { cn } from '@/lib/utils'
 import { Icons } from '@/components/icons'
 import { Button } from '@/components/ui/button'
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
-import { sidebar } from '@/config/sidebar'
+import { sidebarConfig } from '@/config/sidebar'
 
 export function MobileSidebar() {
   const [open, setOpen] = React.useState(false)
@@ -38,7 +39,8 @@ export function MobileSidebar() {
         >
           <Brand />
         </Link>
-        <ScrollArea className="my-4 h-[calc(100vh-20rem)] pb-8">
+        <CommandMenu />
+        <ScrollArea className="mt-2 mb-4 h-[calc(100dvh-20rem)] pb-8">
           <div className="flex flex-col">
             <MobileLink
               href="/"
@@ -48,7 +50,7 @@ export function MobileSidebar() {
             >
               All
             </MobileLink>
-            {sidebar.map(
+            {sidebarConfig.map(
               item =>
                 item.link && (
                   <MobileLink

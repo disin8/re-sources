@@ -1,4 +1,4 @@
-export const sidebar = [
+export const sidebarConfig = [
   {
     name: 'Typography',
     link: 'typography',
