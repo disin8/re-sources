@@ -27,7 +27,7 @@ export default async function NotFound() {
         <div className="w-full grid gap-x-2 gap-y-3 md:grid-cols-2 lg:grid-cols-3 mt-2 pb-[20px]">
 
           {links.map(link => (
-            <Card description={link.description} name={link.name} image={link.image} url={link.url} key={link.name} optional={link.optional} isNew={link.isNew} />
+            <Card description={link.description} name={link.name} image={link.image} url={link.url} key={link.name} optional={link.optional} isNew={link.isNew} whiteBg={link.whiteBg} />
           ))}
         </div>
       </div>

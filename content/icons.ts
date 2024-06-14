@@ -15,6 +15,7 @@ export const iconsLinks: IContent[] = [
     url: 'https://notioly.com/',
     image: '/images/icons/notioly.webp',
     optional: 'paid',
+    whiteBg: true,
   },
   {
     name: 'Fffuel',
@@ -30,5 +31,13 @@ export const iconsLinks: IContent[] = [
     url: 'https://nucleoapp.com/',
     image: '/images/icons/nucleoapp.webp',
     optional: 'free & paid',
+    whiteBg: true,
+  },
+  {
+    name: 'Сoolshapes',
+    description: '100+ custom shapes',
+    url: 'https://coolshap.es/',
+    image: '/images/icons/coolshapes.webp',
+    optional: 'paid',
   },
 ]

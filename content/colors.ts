@@ -22,6 +22,7 @@ export const colorsLinks: IContent[] = [
     url: 'https://uicolors.app/',
     image: '/images/colors/uicolors.webp',
     optional: 'free',
+    whiteBg: true,
   },
   {
     name: 'Color Hunt',
@@ -29,5 +30,14 @@ export const colorsLinks: IContent[] = [
     url: 'https://colorhunt.co/',
     image: '/images/colors/colorhunt.webp',
     optional: 'free',
+    whiteBg: true,
+  },
+  {
+    name: 'MagicPattern',
+    description: 'Beatiful & cool background with 10+ tools',
+    url: 'https://www.magicpattern.design/',
+    image: '/images/colors/magicpattern.webp',
+    optional: 'paid',
+    whiteBg: true,
   },
 ]

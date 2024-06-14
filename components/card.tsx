@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import type { IContent } from '@/types/content'
+import { cn } from '@/lib/utils'
 
-export function Card({ url, description, image, name, optional, isNew }: IContent) {
+export function Card({ url, description, image, name, optional, isNew, whiteBg }: IContent) {
   return (
     <Link href={url} target="_blank">
       <div
@@ -17,11 +18,13 @@ export function Card({ url, description, image, name, optional, isNew }: IConten
               alt={description}
               src={image}
               fill
+              sizes="(max-width: 768px) 100vw, 80vw"
+              quality={85}
               loading="lazy"
               className="rounded-lg object-cover object-center group-hover:scale-105 transition ease-in-out delay-250"
             />
           </div>
-          <div className="text-white absolute bottom-2 left-2 backdrop-blur-sm bg-white/15 rounded-lg inline-block px-2 py-1">
+          <div className={cn('text-white absolute bottom-2 left-2 backdrop-blur-sm bg-white/15 rounded-lg inline-block px-2 py-1', whiteBg && 'bg-black/15')}>
             {optional}
           </div>
           {isNew && (

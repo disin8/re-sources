@@ -22,7 +22,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         className="w-full grid gap-x-4 gap-y-6 md:grid-cols-2 lg:grid-cols-3 mt-8 pb-[80px]"
       >
         {links.map(link => (
-          <Card description={link.description} name={link.name} image={link.image} url={link.url} key={link.name} optional={link.optional} isNew={link.isNew} />
+          <Card description={link.description} name={link.name} image={link.image} url={link.url} key={link.name} optional={link.optional} isNew={link.isNew} whiteBg={link.whiteBg} />
         ))}
       </div>
     </section>

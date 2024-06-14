@@ -24,4 +24,14 @@ export const sidebarConfig = [
     link: 'ai-tools',
     icon: 'aitools',
   },
+  {
+    name: 'Animations',
+    link: 'animations',
+    icon: 'activity',
+  },
+  {
+    name: 'Mockups',
+    link: 'mockups',
+    icon: 'wallpaper',
+  },
 ]
