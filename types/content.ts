@@ -6,4 +6,5 @@ export interface IContent {
   optional: string
   tags?: string[]
   isNew?: boolean
+  whiteBg?: boolean
 }
