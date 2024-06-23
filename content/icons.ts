@@ -38,6 +38,6 @@ export const iconsLinks: IContent[] = [
     description: '100+ custom shapes',
     url: 'https://coolshap.es/',
     image: '/images/icons/coolshapes.webp',
-    optional: 'paid',
+    optional: 'free',
   },
 ]

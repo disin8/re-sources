@@ -18,7 +18,7 @@ export function SidebarLink({ href, highlight, icon, children, className, ...pro
       className={cn(className)}
     >
       <div className="w-full flex gap-3 items-center px-3 py-2 rounded-lg cursor-pointer text-black group transition-colors relative z-0">
-        <div className={cn('[&amp;>svg]:w-[20px] [&amp;>svg]:h-[20px] sm:[&amp;>svg]:h-[14px] sm:[&amp;>svg]:w-[14px] h-[20px] w-[20px] sm:w-[14px] sm:h-[14px] text-gray-300 dark:text-gray-300/50 override-svg-color group-hover:text-black dark:group-hover:text-white group-hover:opacity-100 transition z-10', highlight && 'text-black dark:text-white',
+        <div className={cn('[&amp;>svg]:h-[14px] [&amp;>svg]:w-[14px] w-[14px] h-[14px] text-gray-300 dark:text-gray-300/50 override-svg-color group-hover:text-black dark:group-hover:text-white group-hover:opacity-100 transition z-10', highlight && 'text-black dark:text-white',
         )}
         >
           <Icon width={14} height={14} />

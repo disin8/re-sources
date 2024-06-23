@@ -19,12 +19,12 @@ export function SidebarFooter() {
           </Link>
         </Button>
       </div>
-      <Button className="w-full justify-between" asChild variant="outline">
+      {/* <Button className="w-full justify-between" asChild variant="outline">
         <Link href="mailto:hi@re-sources.com">
           hi@re-sources.com
           <Icons.mail width="14px" height="14px" />
         </Link>
-      </Button>
+      </Button> */}
       <span className="text-sm text-gray-400 leading-5">© 2024 re • sources</span>
     </div>
   )

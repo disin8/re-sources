@@ -34,4 +34,14 @@ export const sidebarConfig = [
     link: 'mockups',
     icon: 'wallpaper',
   },
+  {
+    name: 'Insipration',
+    link: 'inspiration',
+    icon: 'inspiration',
+  },
+  {
+    name: 'Localization',
+    link: 'localization',
+    icon: 'localization',
+  },
 ]

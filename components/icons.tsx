@@ -4,7 +4,9 @@ import {
   CircleDashed,
   CircleDotDashed,
   ExternalLink,
+  Flame,
   Image,
+  Languages,
   Mail,
   Menu,
   Moon,
@@ -36,6 +38,8 @@ export const Icons = {
   circleDashed: CircleDashed,
   activity: Activity,
   wallpaper: Wallpaper,
+  inspiration: Flame,
+  localization: Languages,
   gitHub: (props: LucideProps) => (
     <svg viewBox="0 0 438.549 438.549" {...props}>
       <path

@@ -16,4 +16,12 @@ export const mockupsLinks: IContent[] = [
     optional: 'paid',
     whiteBg: true,
   },
+  {
+    name: 'Morflax',
+    description: 'Generate 3D device mockup in a quick and engaging way',
+    url: 'https://things.morflax.com/',
+    image: '/images/mockups/morflax.webp',
+    optional: 'free & paid',
+    whiteBg: true,
+  },
 ]

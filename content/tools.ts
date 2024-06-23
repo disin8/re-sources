@@ -54,4 +54,11 @@ export const toolsLinks: IContent[] = [
     optional: 'free',
     whiteBg: true,
   },
+  {
+    name: 'Rive',
+    description: 'Build interactive motion graphics',
+    url: 'https://rive.app/',
+    image: '/images/tools/rive.webp',
+    optional: 'free & paid',
+  },
 ]
