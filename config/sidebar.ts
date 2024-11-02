@@ -44,4 +44,14 @@ export const sidebarConfig = [
     link: 'localization',
     icon: 'localization',
   },
+  {
+    name: 'Deploy',
+    link: 'deploy',
+    icon: 'rocket',
+  },
+  {
+    name: 'Testing',
+    link: 'testing',
+    icon: 'testing',
+  },
 ]

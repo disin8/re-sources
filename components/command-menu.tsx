@@ -1,7 +1,7 @@
 'use client'
 
 import type { IContent } from '@/types/content'
-import type { DialogProps } from '@radix-ui/react-alert-dialog'
+import type { DialogProps } from '@radix-ui/react-dialog'
 import {
   CommandDialog,
   CommandEmpty,

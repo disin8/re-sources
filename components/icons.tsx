@@ -15,6 +15,8 @@ import {
   Menu,
   Moon,
   Palette,
+  Rocket,
+  ShieldCheck,
   SunMedium,
   Type,
   Wallpaper,
@@ -40,6 +42,8 @@ export const Icons = {
   wallpaper: Wallpaper,
   inspiration: Flame,
   localization: Languages,
+  rocket: Rocket,
+  testing: ShieldCheck,
   gitHub: (props: LucideProps) => (
     <svg viewBox="0 0 438.549 438.549" {...props}>
       <path
