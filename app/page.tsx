@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { Card } from '@/components/card'
 import { contentLinks } from '@/content'
+import Link from 'next/link'
 
 async function getData() {
   return Object.fromEntries(Object.entries(contentLinks).map(([key, links]) => [key, links.slice(0, 3)]))

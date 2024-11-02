@@ -1,6 +1,6 @@
-import { notFound } from 'next/navigation'
-import { contentLinks } from '@/content'
 import { Card } from '@/components/card'
+import { contentLinks } from '@/content'
+import { notFound } from 'next/navigation'
 
 async function getData(slug: string) {
   const links = contentLinks[slug as keyof typeof contentLinks]
@@ -8,7 +8,8 @@ async function getData(slug: string) {
   return links
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params
   const links = await getData(params.slug)
 
   if (!links) {

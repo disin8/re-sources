@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import type { IContent } from '@/types/content'
 import { cn } from '@/lib/utils'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export function Card({ url, description, image, name, optional, isNew, whiteBg }: IContent) {
   return (

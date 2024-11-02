@@ -1,19 +1,19 @@
 'use client'
 
-import * as React from 'react'
 import type { LinkProps } from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
-import Link from 'next/link'
-import { ScrollArea } from './ui/scroll-area'
-import { Brand } from './brand'
-import { SidebarFooter } from './sidebar-footer'
-import { SidebarLink } from './sidebar-link'
-import { CommandMenu } from './command-menu'
-import { cn } from '@/lib/utils'
 import { Icons } from '@/components/icons'
 import { Button } from '@/components/ui/button'
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
 import { sidebarConfig } from '@/config/sidebar'
+import { cn } from '@/lib/utils'
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
+import * as React from 'react'
+import { Brand } from './brand'
+import { CommandMenu } from './command-menu'
+import { SidebarFooter } from './sidebar-footer'
+import { SidebarLink } from './sidebar-link'
+import { ScrollArea } from './ui/scroll-area'
 
 export function MobileSidebar() {
   const [open, setOpen] = React.useState(false)

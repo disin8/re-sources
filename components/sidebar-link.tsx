@@ -1,6 +1,6 @@
+import { cn } from '@/lib/utils'
 import Link, { type LinkProps } from 'next/link'
 import { Icons } from './icons'
-import { cn } from '@/lib/utils'
 
 interface SidebarLinkProps extends LinkProps {
   highlight: boolean

@@ -1,7 +1,7 @@
 'use client'
+import { sidebarConfig } from '@/config/sidebar'
 import { usePathname } from 'next/navigation'
 import { SidebarLink } from './sidebar-link'
-import { sidebarConfig } from '@/config/sidebar'
 
 export function SidebarMenu() {
   const pathname = usePathname()

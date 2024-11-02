@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import { Button } from './ui/button'
-import { Icons } from './icons'
 import { siteConfig } from '@/config/site'
+import Link from 'next/link'
+import { Icons } from './icons'
+import { Button } from './ui/button'
 
 export function SidebarFooter() {
   return (

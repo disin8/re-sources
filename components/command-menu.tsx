@@ -1,12 +1,7 @@
 'use client'
 
-import * as React from 'react'
-import { useRouter } from 'next/navigation'
+import type { IContent } from '@/types/content'
 import type { DialogProps } from '@radix-ui/react-alert-dialog'
-import Link from 'next/link'
-import { Button } from './ui/button'
-import { Icons } from './icons'
-import { cn } from '@/lib/utils'
 import {
   CommandDialog,
   CommandEmpty,
@@ -17,7 +12,12 @@ import {
 } from '@/components/ui/command'
 import { sidebarConfig } from '@/config/sidebar'
 import { contentLinks } from '@/content'
-import type { IContent } from '@/types/content'
+import { cn } from '@/lib/utils'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import * as React from 'react'
+import { Icons } from './icons'
+import { Button } from './ui/button'
 
 export function CommandLink({ name, optional, description, url, tags }: Omit<IContent, 'image'>) {
   return (
@@ -105,17 +105,16 @@ export function CommandMenu({ ...props }: DialogProps) {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Websites">
-            {Object.values(contentLinks).flat(1)
-              .map(link => (
-                <CommandLink
-                  key={link.name}
-                  name={link.name}
-                  description={link.description}
-                  optional={link.optional}
-                  url={link.url}
-                  tags={link.tags}
-                />
-              ))}
+            {Object.values(contentLinks).flat(1).map(link => (
+              <CommandLink
+                key={link.name}
+                name={link.name}
+                description={link.description}
+                optional={link.optional}
+                url={link.url}
+                tags={link.tags}
+              />
+            ))}
           </CommandGroup>
           <CommandGroup heading="Categories">
             {sidebarConfig

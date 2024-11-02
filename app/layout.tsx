@@ -1,14 +1,14 @@
-import '@/styles/globals.css'
 import type { Metadata, Viewport } from 'next'
+import { Sidebar } from '@/components/sidebar'
 
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+import { SiteHeader } from '@/components/site-header'
+import { ThemeProvider } from '@/components/theme-provider'
 import { siteConfig } from '@/config/site'
 import { fontSans } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
-import { SiteHeader } from '@/components/site-header'
-import { ThemeProvider } from '@/components/theme-provider'
-import { Sidebar } from '@/components/sidebar'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import '@/styles/globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://re-sources.vercel.app/'),

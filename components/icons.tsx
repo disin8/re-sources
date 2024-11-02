@@ -1,3 +1,7 @@
+import type {
+  LucideProps,
+} from 'lucide-react'
+
 import {
   Activity,
   Brain,
@@ -16,10 +20,6 @@ import {
   Wallpaper,
   Wrench,
   X,
-} from 'lucide-react'
-
-import type {
-  LucideProps,
 } from 'lucide-react'
 
 export const Icons = {

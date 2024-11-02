@@ -1,5 +1,5 @@
-import { contentLinks } from '@/content'
 import { Card } from '@/components/card'
+import { contentLinks } from '@/content'
 
 async function getData() {
   const flatLinks = Object.values(contentLinks).flat(1)

@@ -1,3 +1,4 @@
+import type { IContent } from '@/types/content'
 import { aitoolsLinks } from './aitools'
 import { animationsLinks } from './animations'
 import { colorsLinks } from './colors'
@@ -7,7 +8,6 @@ import { localizationLinks } from './localization'
 import { mockupsLinks } from './mockups'
 import { toolsLinks } from './tools'
 import { typographyLinks } from './typography'
-import type { IContent } from '@/types/content'
 
 export const contentLinks: Record<string, IContent[]> = {
   'typography': typographyLinks,
