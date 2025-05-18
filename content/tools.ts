@@ -2,6 +2,20 @@ import type { IContent } from '@/types/content'
 
 export const toolsLinks: IContent[] = [
   {
+    name: 'Can Include',
+    description: 'Can I include a child tag to a parent tag?',
+    url: 'https://caninclude.glitch.me/',
+    image: '/images/tools/caninclude.png',
+    optional: 'free',
+  },
+  {
+    name: 'Can I use',
+    description: 'Can I use... Support tables for HTML5, CSS3, etc',
+    url: 'https://caniuse.com/',
+    image: '/images/tools/caniuse.webp',
+    optional: 'free',
+  },
+  {
     name: 'Squoosh',
     description: 'The ultimate image optimizer',
     url: 'https://squoosh.app/',
@@ -21,13 +35,6 @@ export const toolsLinks: IContent[] = [
     description: 'Online Tools for Developers',
     url: 'https://web-toolbox.dev/en',
     image: '/images/tools/web-toolbox.png',
-    optional: 'free',
-  },
-  {
-    name: 'Can Include',
-    description: 'Can I include a child tag to a parent tag?',
-    url: 'https://caninclude.glitch.me/',
-    image: '/images/tools/caninclude.png',
     optional: 'free',
   },
   {

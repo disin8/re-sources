@@ -18,7 +18,7 @@
 
 ## Introduction
 
-Open source curated design resources for developers.
+Open source curated design resources for developers and designers.
 
 ## Tech Stack
 
