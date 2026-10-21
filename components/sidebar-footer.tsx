@@ -1,5 +1,5 @@
-import { siteConfig } from '@/config/site'
 import Link from 'next/link'
+import { siteConfig } from '@/config/site'
 import { Icons } from './icons'
 import { Button } from './ui/button'
 
@@ -25,7 +25,7 @@ export function SidebarFooter() {
           <Icons.mail width="14px" height="14px" />
         </Link>
       </Button> */}
-      <span className="text-sm text-gray-400 leading-5">© 2025 re • sources</span>
+      <span className="text-sm text-gray-400 leading-5">© 2026 re • sources</span>
     </div>
   )
 }

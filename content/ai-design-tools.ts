@@ -1,0 +1,56 @@
+import type { IContent } from '@/types/content'
+
+export const aiDesignToolsResources: IContent[] = [
+  {
+    slug: 'midjourney',
+    name: 'Midjourney',
+    description: 'High-fidelity generative images with strong art direction.',
+    details:
+      'Midjourney produces the most consistently striking output of the major image generators, which makes it the default choice for mood boards, editorial imagery and abstract backgrounds. It runs through Discord and its own web app. The output can be upscaled and varied, but the free tier is trial-only and commercial rights start with a paid plan.',
+    url: 'https://www.midjourney.com/',
+    image: '/images/ai-design-tools/midjourney.webp',
+    type: 'saas',
+    price: 'subscription',
+    license: 'proprietary',
+    licenseLabel: 'Commercial rights on paid plans',
+    platforms: ['web'],
+    tags: ['image generation', 'illustration', 'art direction', 'discord'],
+    addedAt: '2024-08-12',
+    reviewedAt: '2026-10-04',
+    featured: true,
+  },
+  {
+    slug: 'krea',
+    name: 'Krea',
+    description: 'Real-time generative canvas for images and video.',
+    details:
+      'Krea puts generation on an infinite canvas where you can steer the result in real time rather than waiting for a queue. It handles image generation, upscaling, and short video, with a strong real-time model for interactive exploration. The free tier is usable for experimentation; paid plans unlock higher resolution and commercial rights.',
+    url: 'https://www.krea.ai/',
+    image: '/images/ai-design-tools/krea.webp',
+    type: 'saas',
+    price: 'freemium',
+    license: 'proprietary',
+    licenseLabel: 'Commercial rights on paid plans',
+    platforms: ['web'],
+    tags: ['real-time', 'canvas', 'video', 'upscaling'],
+    addedAt: '2024-08-12',
+    reviewedAt: '2026-10-04',
+  },
+  {
+    slug: 'suno',
+    name: 'Suno',
+    description: 'Generates complete songs from a text prompt.',
+    details:
+      'Suno turns a text description into a full song with vocals, and supports extending and editing sections of an existing track. It is the fastest way to get a piece of plausible music for a prototype or a demo video without licensing anything. Free generations are for personal use; paid plans carry commercial rights.',
+    url: 'https://suno.com/',
+    image: '/images/ai-design-tools/suno.webp',
+    type: 'saas',
+    price: 'subscription',
+    license: 'proprietary',
+    licenseLabel: 'Commercial rights on paid plans',
+    platforms: ['web'],
+    tags: ['music', 'audio', 'prompt', 'songs'],
+    addedAt: '2024-08-12',
+    reviewedAt: '2026-10-04',
+  },
+]

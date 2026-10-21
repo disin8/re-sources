@@ -1,10 +1,10 @@
-import { Icons } from '@/components/icons'
+import Link from 'next/link'
 
+import { Icons } from '@/components/icons'
 import { MobileSidebar } from '@/components/mobile-sidebar'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { buttonVariants } from '@/components/ui/button'
 import { siteConfig } from '@/config/site'
-import Link from 'next/link'
 import { Brand } from './brand'
 import { CommandMenu } from './command-menu'
 

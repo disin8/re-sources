@@ -1,10 +1,10 @@
 import type { DialogProps } from '@radix-ui/react-dialog'
-import { Dialog, DialogContent } from '@/components/ui/dialog'
-import { cn } from '@/lib/utils'
 import { Command as CommandPrimitive } from 'cmdk'
-
 import { Search } from 'lucide-react'
 import * as React from 'react'
+
+import { Dialog, DialogContent } from '@/components/ui/dialog'
+import { cn } from '@/lib/utils'
 
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>,
@@ -13,8 +13,6 @@ const Command = React.forwardRef<
   <CommandPrimitive
     ref={ref}
     className={cn(
-      // removed rounded-md to remove text blur
-      // https://github.com/shadcn-ui/ui/issues/711
       'flex h-full w-full flex-col overflow-hidden bg-popover text-popover-foreground',
       className,
     )}

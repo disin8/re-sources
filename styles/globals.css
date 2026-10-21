@@ -6,8 +6,8 @@
 @layer base {
 
   ::-moz-selection {
-    background: #799dff;
     color: #000;
+    background: #799dff;
   }
 
   ::-webkit-selection {
@@ -18,6 +18,17 @@
   ::selection {
     background: #799dff;
     color: #000;
+  }
+
+  /*
+    The brand accent #799dff is a light periwinkle. It reads well as an
+    accent on the dark surface, but white text on top of it only reaches a
+    2.6:1 contrast ratio. `brand-solid` is the darker shade used wherever
+    white text sits on a solid brand background, which clears WCAG AA.
+  */
+  :root {
+    --brand: #799dff;
+    --brand-solid: #4263eb;
   }
 
   :root {
@@ -49,5 +60,26 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /*
+   * A visible focus ring on every interactive element. The default browser
+   * outline is removed on several controls, so it is reinstated here to keep
+   * keyboard navigation usable.
+   */
+  :focus-visible {
+    @apply outline-none ring-2 ring-[#799dff] ring-offset-2 ring-offset-background rounded-sm;
+  }
+
+  /* Respect the OS reduced-motion preference for every animation. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }

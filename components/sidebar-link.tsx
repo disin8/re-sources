@@ -1,5 +1,5 @@
-import { cn } from '@/lib/utils'
 import Link, { type LinkProps } from 'next/link'
+import { cn } from '@/lib/utils'
 import { Icons } from './icons'
 
 interface SidebarLinkProps extends LinkProps {

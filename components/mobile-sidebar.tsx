@@ -1,14 +1,14 @@
 'use client'
 
 import type { LinkProps } from 'next/link'
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
+import * as React from 'react'
 import { Icons } from '@/components/icons'
 import { Button } from '@/components/ui/button'
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
 import { sidebarConfig } from '@/config/sidebar'
 import { cn } from '@/lib/utils'
-import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
-import * as React from 'react'
 import { Brand } from './brand'
 import { CommandMenu } from './command-menu'
 import { SidebarFooter } from './sidebar-footer'
@@ -55,7 +55,7 @@ export function MobileSidebar() {
                 item.link && (
                   <MobileLink
                     key={item.link}
-                    href={item.link}
+                    href={`/${item.link}`}
                     onOpenChange={setOpen}
                     icon={item.icon}
                     highlight={pathname?.startsWith(`/${item.link}`)}
@@ -64,6 +64,23 @@ export function MobileSidebar() {
                   </MobileLink>
                 ),
             )}
+            <div className="my-3 border-t border-gray-100 dark:border-neutral-900" />
+            <MobileLink
+              href="/collections"
+              onOpenChange={setOpen}
+              icon="dot"
+              highlight={pathname?.startsWith('/collections')}
+            >
+              Collections
+            </MobileLink>
+            <MobileLink
+              href="/about"
+              onOpenChange={setOpen}
+              icon="dot"
+              highlight={pathname?.startsWith('/about')}
+            >
+              How we choose
+            </MobileLink>
           </div>
         </ScrollArea>
         <SidebarFooter />

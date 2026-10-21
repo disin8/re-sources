@@ -1,7 +1,10 @@
 'use client'
 
-import type { IContent } from '@/types/content'
 import type { DialogProps } from '@radix-ui/react-dialog'
+import type { IContent } from '@/types/content'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import * as React from 'react'
 import {
   CommandDialog,
   CommandEmpty,
@@ -11,35 +14,39 @@ import {
   CommandList,
 } from '@/components/ui/command'
 import { sidebarConfig } from '@/config/sidebar'
-import { contentLinks } from '@/content'
+import { contentLinks, getCollections } from '@/content'
 import { cn } from '@/lib/utils'
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import * as React from 'react'
 import { Icons } from './icons'
 import { Button } from './ui/button'
 
-export function CommandLink({ name, optional, description, url, tags }: Omit<IContent, 'image'>) {
+const priceLabels: Record<IContent['price'], string> = {
+  free: 'Free',
+  freemium: 'Freemium',
+  paid: 'Paid',
+  subscription: 'Subscription',
+}
+
+export function CommandLink({ name, price, description, url, tags }: Pick<IContent, 'name' | 'description' | 'url' | 'tags' | 'price'>) {
   return (
     <CommandItem
       value={name}
-      keywords={[optional, description, ...(tags || [])]}
+      keywords={[priceLabels[price], description, ...(tags || [])]}
       asChild
       className="cursor-pointer"
     >
-      <Link href={url} target="_blank" className="group flex flex-row justify-between">
+      <Link href={url} target="_blank" rel="noopener noreferrer" className="group flex flex-row justify-between">
         <span>
           <span>
             {name}
             {' '}
-            <span className="text-gray-600 dark:text-neutral-400  overflow-hidden">{description}</span>
+            <span className="text-gray-600 dark:text-neutral-400 overflow-hidden">{description}</span>
           </span>
-          <span className="flex gap-0.5 flex-wrap overflow-hidden">
-            <span className="text-white font-light relative text-sm backdrop-blur-sm bg-[#799dff]/80 dark:bg-white/15 rounded-lg inline-block px-1 py-0.5">
-              {optional}
+          <span className="flex gap-0.5 flex-wrap overflow-hidden mt-1">
+            <span className="text-white font-light relative text-sm backdrop-blur-sm bg-[var(--brand-solid)] dark:bg-white/15 rounded-lg inline-block px-1 py-0.5">
+              {priceLabels[price]}
             </span>
-            {tags?.map(tag => (
-              <span className="text-white font-light relative text-sm backdrop-blur-sm bg-[#799dff]/50 dark:bg-white/15 rounded-lg inline-block px-1 py-0.5">
+            {tags?.slice(0, 3).map(tag => (
+              <span key={tag} className="text-white font-light relative text-sm backdrop-blur-sm bg-[var(--brand-solid)]/85 dark:bg-white/15 rounded-lg inline-block px-1 py-0.5">
                 {tag}
               </span>
             ))}
@@ -54,6 +61,7 @@ export function CommandLink({ name, optional, description, url, tags }: Omit<ICo
 export function CommandMenu({ ...props }: DialogProps) {
   const router = useRouter()
   const [open, setOpen] = React.useState(false)
+  const collections = getCollections()
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -101,16 +109,16 @@ export function CommandMenu({ ...props }: DialogProps) {
         open={open}
         onOpenChange={setOpen}
       >
-        <CommandInput placeholder="Type a command or search..." />
+        <CommandInput placeholder="Search by name, use case or tag..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="Websites">
+          <CommandGroup heading="Resources">
             {Object.values(contentLinks).flat(1).map(link => (
               <CommandLink
-                key={link.name}
+                key={link.slug}
                 name={link.name}
                 description={link.description}
-                optional={link.optional}
+                price={link.price}
                 url={link.url}
                 tags={link.tags}
               />
@@ -123,13 +131,27 @@ export function CommandMenu({ ...props }: DialogProps) {
                   key={navItem.link}
                   value={navItem.name}
                   onSelect={() => {
-                    runCommand(() => router.push(navItem.link as string))
+                    runCommand(() => router.push(`/${navItem.link}`))
                   }}
                 >
                   <Icons.circleDashed className="mr-2 h-4 w-4" />
                   {navItem.name}
                 </CommandItem>
               ))}
+          </CommandGroup>
+          <CommandGroup heading="Collections">
+            {collections.map(collection => (
+              <CommandItem
+                key={collection.slug}
+                value={collection.title}
+                onSelect={() => {
+                  runCommand(() => router.push(`/collections/${collection.slug}`))
+                }}
+              >
+                <Icons.circleDashed className="mr-2 h-4 w-4" />
+                {collection.title}
+              </CommandItem>
+            ))}
           </CommandGroup>
         </CommandList>
       </CommandDialog>

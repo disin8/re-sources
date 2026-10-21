@@ -1,17 +1,17 @@
 export const sidebarConfig = [
   {
-    name: 'Typography',
-    link: 'typography',
+    name: 'Fonts',
+    link: 'fonts',
     icon: 'type',
   },
   {
-    name: 'Colors',
-    link: 'colors',
+    name: 'Color palettes',
+    link: 'color-palettes',
     icon: 'colors',
   },
   {
-    name: 'Tools',
-    link: 'tools',
+    name: 'Developer tools',
+    link: 'developer-tools',
     icon: 'tools',
   },
   {
@@ -20,13 +20,13 @@ export const sidebarConfig = [
     icon: 'icons',
   },
   {
-    name: 'AI tools',
-    link: 'ai-tools',
+    name: 'AI design tools',
+    link: 'ai-design-tools',
     icon: 'aitools',
   },
   {
-    name: 'Animations',
-    link: 'animations',
+    name: 'Animation tools',
+    link: 'animation-tools',
     icon: 'activity',
   },
   {
@@ -35,23 +35,23 @@ export const sidebarConfig = [
     icon: 'wallpaper',
   },
   {
-    name: 'Insipration',
-    link: 'inspiration',
+    name: 'Design inspiration',
+    link: 'design-inspiration',
     icon: 'inspiration',
   },
   {
-    name: 'Localization',
-    link: 'localization',
+    name: 'Localization tools',
+    link: 'localization-tools',
     icon: 'localization',
   },
   {
-    name: 'Deploy',
-    link: 'deploy',
+    name: 'Deployment tools',
+    link: 'deployment-tools',
     icon: 'rocket',
   },
   {
-    name: 'Testing',
-    link: 'testing',
+    name: 'Testing tools',
+    link: 'testing-tools',
     icon: 'testing',
   },
 ]
