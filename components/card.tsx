@@ -34,8 +34,8 @@ export function Card({ resource, category }: { resource: IContent, category?: st
                     src={image}
                     fill
                     sizes="(max-width: 768px) 100vw, 40vw"
-                    quality={85}
                     loading="lazy"
+                    unoptimized
                     className="rounded-lg object-cover object-center group-hover:scale-105 transition ease-in-out delay-250"
                   />
                 )
